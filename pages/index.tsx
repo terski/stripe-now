@@ -1,5 +1,6 @@
 import { Heading, Flex } from '@chakra-ui/core';
 import Head from 'next/head';
+import Checkout from '../components/checkout';
 
 const Index = () => {
     return (
@@ -11,6 +12,7 @@ const Index = () => {
                 <Heading as="h1" size="2xl">
                     This is the home page
                 </Heading>
+                <Checkout></Checkout>
             </Flex>
         </>
     );
