@@ -29,8 +29,14 @@ const Checkout = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <Box m={4} h={8} w={300} >
-                <CardElement />
+            <Box m={4} h={8} w={400} >
+                <CardElement options={{
+                    style: {
+                        base: {
+                            fontSize: '18px'
+                        }
+                    }
+                }}/>
             </Box>
 
             <Button type="submit" variantColor="green" isDisabled={!stripe}>
