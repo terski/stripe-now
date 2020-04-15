@@ -12,7 +12,7 @@ const Index = () => {
                 <Heading as="h1" size="xl">
                     Matt's Muffins
                 </Heading>
-                <Text m={4}>
+                <Text textAlign="center" m={4}>
                     Three muffins delivered to your front door each week for $19
                     per month.
                 </Text>
