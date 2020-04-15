@@ -28,21 +28,29 @@ const Checkout = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <Box m={4} h={8} w={400} >
-                <CardElement options={{
-                    style: {
-                        base: {
-                            fontSize: '18px'
-                        }
-                    }
-                }}/>
-            </Box>
+        <Box width="100%" maxW={500} p={4} my={4} borderWidth="1px">
+            <form onSubmit={handleSubmit}>
+                <CardElement
+                    options={{
+                        style: {
+                            base: {
+                                fontSize: '18px',
+                            },
+                        },
+                    }}
+                />
 
-            <Button type="submit" variantColor="green" isDisabled={!stripe}>
-                Pay
-            </Button>
-        </form>
+                <Button
+                    type="submit"
+                    width="100%"
+                    mt={4}
+                    variantColor="green"
+                    isDisabled={!stripe}
+                >
+                    Pay
+                </Button>
+            </form>
+        </Box>
     );
 };
 
