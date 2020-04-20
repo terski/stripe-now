@@ -1,0 +1,7 @@
+{
+    "name": "stripe-now",
+    "version": 2,
+    "env": {
+        "STRIPE_SECRET_KEY": "@stripe-secret-key"
+    }
+}
