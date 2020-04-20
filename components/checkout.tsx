@@ -24,6 +24,15 @@ const Checkout = () => {
             console.error(error);
         } else {
             console.log(paymentMethod);
+            const response = await fetch('/api/membership', {
+                method: 'post',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: 'foo@foo.com',
+                    payment_method: paymentMethod.id,
+                }),
+            });
+            console.log(await response.json());
         }
     };
 
