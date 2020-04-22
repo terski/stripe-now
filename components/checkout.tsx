@@ -1,6 +1,7 @@
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { Button, Box, Flex } from '@chakra-ui/core';
 import { SyntheticEvent } from 'react';
+import PaymentButton from './payment-button';
 
 const Checkout = () => {
     const stripe = useStripe();
@@ -52,12 +53,13 @@ const Checkout = () => {
                 <Button
                     type="submit"
                     width="100%"
-                    mt={4}
+                    my={4}
                     variantColor="green"
                     isDisabled={!stripe}
                 >
-                    Pay
+                    Pay with Card
                 </Button>
+                <PaymentButton />
             </form>
         </Box>
     );
