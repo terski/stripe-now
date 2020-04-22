@@ -53,11 +53,11 @@ const Checkout = () => {
                 <Button
                     type="submit"
                     width="100%"
-                    mt={4}
+                    my={4}
                     variantColor="green"
                     isDisabled={!stripe}
                 >
-                    Pay
+                    Pay with Card
                 </Button>
                 <PaymentButton />
             </form>
