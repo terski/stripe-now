@@ -35,7 +35,9 @@ const PaymentButton = () => {
 
             const checkCanMakePayment = async () => {
                 const result = await request.canMakePayment();
-                setCanMakePayment(result?.applePay || false);
+                console.log(result);
+                // setCanMakePayment(result?.applePay || false);
+                setCanMakePayment(true);
             };
             checkCanMakePayment();
         }
@@ -43,7 +45,11 @@ const PaymentButton = () => {
 
     return (
         <>
-            { canMakePayment && <PaymentRequestButtonElement /> }
+            {canMakePayment ? (
+                <PaymentRequestButtonElement options={{ paymentRequest }} />
+            ) : (
+                <div>PaymentRequestButton not supported</div>
+            )}
         </>
     );
 };
