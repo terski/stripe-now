@@ -37,7 +37,7 @@ const PaymentButton = () => {
                 const result = await request.canMakePayment();
                 console.log(result);
                 // setCanMakePayment(result?.applePay || false);
-                setCanMakePayment(true);
+                setCanMakePayment(false);
             };
             checkCanMakePayment();
         }

@@ -6,15 +6,18 @@ const Index = () => {
     return (
         <>
             <Head>
-                <title>Matt's Muffins</title>
+                <title>Matt's Moon Cakes</title>
             </Head>
             <Flex flexDirection="column" alignItems="center" margin={6}>
                 <Heading as="h1" size="xl">
-                    Matt's Muffins
+                    Matt's Moon Cakes
                 </Heading>
                 <Text textAlign="center" m={4}>
-                    Three muffins delivered to your front door each week for $19
-                    per month.
+                    Three moon cakes delivered to your front door for $19 per
+                    month.
+                </Text>
+                <Text textAlign="center" fontSize="6xl">
+                    🥮 🥮 🥮
                 </Text>
                 <Checkout></Checkout>
             </Flex>
