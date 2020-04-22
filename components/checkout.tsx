@@ -1,6 +1,7 @@
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { Button, Box, Flex } from '@chakra-ui/core';
 import { SyntheticEvent } from 'react';
+import PaymentButton from './payment-button';
 
 const Checkout = () => {
     const stripe = useStripe();
@@ -58,6 +59,7 @@ const Checkout = () => {
                 >
                     Pay
                 </Button>
+                <PaymentButton />
             </form>
         </Box>
     );
