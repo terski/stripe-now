@@ -5,6 +5,7 @@ import {
     PaymentRequestButtonElement,
 } from '@stripe/react-stripe-js';
 import { useEffect, useState } from 'react';
+import { Box } from '@chakra-ui/core';
 
 const PaymentButton = () => {
     const [paymentRequest, setPaymentRequest] = useState<PaymentRequest>(null);
@@ -35,9 +36,8 @@ const PaymentButton = () => {
 
             const checkCanMakePayment = async () => {
                 const result = await request.canMakePayment();
-                console.log(result);
-                // setCanMakePayment(result?.applePay || false);
-                setCanMakePayment(true);
+                console.log(`canMakePayment: ${JSON.stringify(result)}`);
+                setCanMakePayment(!!result);
             };
             checkCanMakePayment();
         }
@@ -45,10 +45,10 @@ const PaymentButton = () => {
 
     return (
         <>
-            {canMakePayment ? (
-                <PaymentRequestButtonElement options={{ paymentRequest }} />
-            ) : (
-                <div>PaymentRequestButton not supported</div>
+            {canMakePayment && (
+                <Box mt={4}>
+                    <PaymentRequestButtonElement options={{ paymentRequest }} />
+                </Box>
             )}
         </>
     );
