@@ -53,7 +53,7 @@ const Checkout = () => {
                 <Button
                     type="submit"
                     width="100%"
-                    my={4}
+                    mt={4}
                     variantColor="green"
                     isDisabled={!stripe}
                 >
