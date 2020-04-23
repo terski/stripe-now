@@ -36,7 +36,7 @@ const PaymentButton = () => {
 
             const checkCanMakePayment = async () => {
                 const result = await request.canMakePayment();
-                console.log(`canMakePayment: ${result}`);
+                console.log(`canMakePayment: ${JSON.stringify(result)}`);
                 setCanMakePayment(result?.applePay || false);
             };
             checkCanMakePayment();
