@@ -38,7 +38,7 @@ const Checkout = () => {
     };
 
     return (
-        <Box width="100%" maxW={500} p={4} my={4} borderWidth="1px">
+        <Box width="100%" maxW={500} p={4} mt={4} borderWidth="1px">
             <form onSubmit={handleSubmit}>
                 <CardElement
                     options={{

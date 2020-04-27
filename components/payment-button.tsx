@@ -23,13 +23,13 @@ const PaymentButton = () => {
                 country: 'US',
                 currency: 'usd',
                 total: {
-                    label: 'Muffin total',
+                    label: `Test: Your card won't be charged`,
                     amount: 1900,
                 },
             });
 
             request.on('token', ({ complete, token, ...data }) => {
-                console.log(`complete = ${complete}, token = ${token}`);
+                complete('success');
             });
 
             setPaymentRequest(request);
