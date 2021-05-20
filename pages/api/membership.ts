@@ -29,7 +29,7 @@ export default async (req: NowRequest, res: NowResponse) => {
 
     const subscription = await stripe.subscriptions.create({
         customer: customer.id,
-        items: [{ plan: 'plan_GkpnkH8QQVmLbb' }],
+        items: [{ price: 'plan_GkpnkH8QQVmLbb' }],
         expand: ['latest_invoice.payment_intent'],
     });
 
