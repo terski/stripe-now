@@ -1,8 +1,8 @@
-import { Heading, Flex, Text, Link } from '@chakra-ui/react';
+import { Heading, Flex, Text, Box, Link } from '@chakra-ui/react';
 import Head from 'next/head';
-import Checkout from '../components/checkout';
+import CheckoutForm from '../components/checkout-form';
 
-const Index = () => {
+const Checkout = () => {
     return (
         <>
             <Head>
@@ -19,7 +19,7 @@ const Index = () => {
                 <Text textAlign="center" fontSize="6xl">
                     🥮 🥮 🥮
                 </Text>
-                <Checkout></Checkout>
+                <CheckoutForm></CheckoutForm>
                 <Flex
                     flexDirection="row"
                     justifyContent="space-between"
@@ -44,4 +44,4 @@ const Index = () => {
     );
 };
 
-export default Index;
+export default Checkout;

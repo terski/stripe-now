@@ -5,7 +5,7 @@ import {
     PaymentRequestButtonElement,
 } from '@stripe/react-stripe-js';
 import { useEffect, useState } from 'react';
-import { Box } from '@chakra-ui/core';
+import { Box } from '@chakra-ui/react';
 
 const PaymentButton = () => {
     const [paymentRequest, setPaymentRequest] = useState<PaymentRequest>(null);

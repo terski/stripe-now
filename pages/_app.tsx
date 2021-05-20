@@ -1,17 +1,16 @@
 import { AppProps } from 'next/app';
-import { ThemeProvider, CSSReset } from '@chakra-ui/core';
-import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
+import getStripe from '../utils/get-stripe';
+import { ChakraProvider } from '@chakra-ui/react';
 
-const stripePromise = loadStripe(process.env.STRIPE_PUBLISHABLE_KEY);
+const stripePromise = getStripe();
 
 const App = ({ Component, pageProps }: AppProps) => {
     return (
         <Elements stripe={stripePromise}>
-            <ThemeProvider>
-                <CSSReset />
+            <ChakraProvider>
                 <Component {...pageProps} />
-            </ThemeProvider>
+            </ChakraProvider>
         </Elements>
     );
 };

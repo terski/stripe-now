@@ -8,12 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
-    "@chakra-ui/core": "^0.7.0",
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
+    "@chakra-ui/react": "^1.6.2",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
     "@stripe/react-stripe-js": "^1.4.1",
     "@stripe/stripe-js": "^1.15.0",
-    "emotion-theming": "^10.0.27",
+    "framer-motion": "^4",
     "next": "^9.3.3",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
