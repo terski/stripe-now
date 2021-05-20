@@ -41,8 +41,9 @@ export default async (req: NowRequest, res: NowResponse) => {
                     quantity: 1,
                 },
             ],
+            // customer: 'cus_JPzdzGBv3VucQJ',
             success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-            cancel_url: `${req.headers.origin}/cancel`,
+            cancel_url: `${req.headers.origin}/checkout`,
         });
 
         res.json({ ...session });
